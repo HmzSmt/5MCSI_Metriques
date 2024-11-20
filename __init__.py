@@ -61,9 +61,9 @@ def commits():
     results = [{'minute': minute, 'commits': count} for minute, count in commits_per_minute.items()]
     return jsonify(results=results)
 
-@app.route("/commits-chart/")
+@app.route("/commit/")
 def commits_chart():
-    return render_template("commits.html")
+    return render_template("commit.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
